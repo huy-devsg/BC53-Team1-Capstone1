@@ -50,15 +50,64 @@ header .navbar .navbar-brand:hover {
     content: '';
     height: 2px;
     width: 0;
-    background-color: red;
+    background-color: #dc4f72;
     bottom: 5px;
     position: absolute;
     transition: all .5s;
 }
-
 #masterNavbar .nav-item:hover .nav-link::before {
     width: 20px; 
 }
+#masterNavbar .dropdown-toggle::after { 
+    content: none; 
+    }
+#masterNavbar .nav-item.dropdown
+{
+    position: relative;
+}
+#masterNavbar .nav-item.dropdown::before
+{
+    content: "\f107";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 20PX;
+    font-size: 12px;
+    top: 45%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+#masterNavbar .dropdown-menu
+{
+    position: absolute;
+    box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);    
+    background: #fff;
+    border: 1px solid #eee;
+    top: 50px;
+    left: -50%;
+} 
+#masterNavbar .dropdown-item
+{
+    position: relative;
+}
+#masterNavbar .dropdown-item:hover
+{
+    background: #fff;
+}
+#masterNavbar .dropdown-item::before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    background-color: #dc4f72;
+    position: absolute;
+    transition: all .5s;
+}
+#masterNavbar .dropdown-item:hover::before 
+{
+    width: 20px;
+}  
 #masterNavbar button
 {
     background-color: #fff;
@@ -73,9 +122,34 @@ header .navbar .navbar-brand:hover {
 #masterNavbar button:hover
 {
     background-color: #dc4f72;
-    color: #fff;1
+    color: #fff;
 }
 #masterNavbar i.gg-sun
 {
     display: none;
 }
+/* CAROUSEL */
+.masterCarousel
+{
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.92)), url('/./images/banner.jpg');
+    height: 500px;
+    background-size: cover;
+    position: relative;
+}
+.title p:first-of-type
+{
+    font-size: 16px;
+    font-weight: 600;
+    color: #dc4f72;
+}
+.title h3
+{
+    font-size: 46px;
+    color: #2c3038;
+    line-height: 1;
+}
+.title p:last-of-type()
+{
+    font-size: 16px;
+    color: red;
+} 
