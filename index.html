@@ -26,7 +26,7 @@
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-toggle="affix">
           <div class="container">
             <a class="navbar-brand" href="#">
               <i class="fa fa-handshake-o" aria-hidden="true"></i>
@@ -64,7 +64,7 @@
                 </a>
               </li>
             </ul>
-           <button>
+           <button class="btn-border mt-0">
               SCHEDULE A DEMO
            </button>
            <div class="mode-container mx-3">
@@ -76,17 +76,139 @@
         </nav>            
     </header>
     <section class="masterCarousel">
-      <div class="container">
-        <div class="title my-3">
-          <p>WHY CHOOSE US</p>
-          <h3>We Execute Our Ideas From Start to Finish</h3>
-          <p>Building a beautiful interactive business for startups and innovative companies.</p>
-        </div>
+        <div class="container masterCarousel__content">
+          <div class="masterCarousel__left">
+            <div class="title">
+              <h3 class="mb-3 mb-md-4">We Execute Our Ideas From Start to Finish</h3>
+              <p>Building a beautiful interactive business for startups and innovative companies.</p>
+              <button class="btn-border">
+                GET STARTED
+             </button>
+            </div>
+          </div>
+          <div class="masterCarousel__right">
+              <img src="./images/main.png" alt="">
+          </div>
+      </div>
+    </section>
+    <section class="masterIntro py-5" id="masterIntro">
+      <div class="title text-center mx-auto">
+        <span>WHY CHOOSE US</span>
+        <h3 class="mb-3 mb-md-4">Tools for business startup to professional</h3>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
+      </div>
+      <div class="container card-deck mx-auto">
+        
+        <div class="card text-center">
+          <a href="#">
+            <img src="./images/s1.png" class="card-img-top mx-auto" alt="...">
+            <div class="card-body pb-0">
+              <h5 class="card-title">Interactive</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+            </div>
+          </a>
+          </div>
+        <div class="card text-center">
+          <a href="#">
+            <img src="./images/s2.png" class="card-img-top mx-auto" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bussiness</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+            </div>
+          </a>
+          </div>
+        <div class="card text-center">
+          <a href="#">
+            <img src="./images/s3.png" class="card-img-top mx-auto" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Inspiration</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+            </div>
+          </a>
+          </div>
       </div>
     </section>
 
 
-    
+    <section class="masterAbout py-5">
+      <div class="container masterAbout__content">
+        <div class="masterAbout__left">
+          <div class="title">
+            <span>ABOUT OUR COMPANY</span>
+            <h3 class="mb-3 mb-md-4">The Best Choice For Your Successful Business!</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et est repellendus illum harum quam nihil totam reprehenderit! Ut sed eveniet quos! Asperiores officia, repudiandae similique reiciendis, ab est magnam esse nesciunt ea fuga facere voluptatem.</p>
+            <button class="btn-pink">
+              READ MORE
+           </button>
+          </div>
+        </div>
+        <div class="masterAbout__right">
+            <img src="./images/about.jpg" alt="">
+        </div>
+    </div>
+    <div class="container card-deck mx-auto">
+      
+      <div class="card text-center">
+        <a href="#">
+          <img src="./images/s1.png" class="card-img-top mx-auto" alt="...">
+          <div class="card-body pb-0">
+            <h5 class="card-title">Interactive</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+          </div>
+        </a>
+        </div>
+      <div class="card text-center">
+        <a href="#">
+          <img src="./images/s2.png" class="card-img-top mx-auto" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bussiness</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+          </div>
+        </a>
+        </div>
+      <div class="card text-center">
+        <a href="#">
+          <img src="./images/s3.png" class="card-img-top mx-auto" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Inspiration</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+          </div>
+        </a>
+        </div>
+    </div>
+  </section>
+    <!-- SCROLL STICKY NAV -->
+    <script>
+      $(document).ready(function() {
+var toggleAffix = function(affixElement, scrollElement, wrapper) {
+  var height = affixElement.outerHeight(),
+      top = wrapper.offset().top;
+  if (scrollElement.scrollTop() >= top){
+      wrapper.height(height);
+      affixElement.addClass("affix");
+  }
+  else {
+      affixElement.removeClass("affix");
+      wrapper.height('auto');
+  }   
+};
+$('[data-toggle="affix"]').each(function() {
+  var ele = $(this),
+      wrapper = $('<div></div>');
+  ele.before(wrapper);
+  $(window).on('scroll resize', function() {
+      toggleAffix(ele, $(this), wrapper);
+  });
+  toggleAffix(ele, $(window), wrapper);
+});
+});
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -94,3 +216,786 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- --------------------------------------------------------- -->
+<!-- code từ đây -->

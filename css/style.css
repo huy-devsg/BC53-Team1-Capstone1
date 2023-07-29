@@ -1,16 +1,26 @@
 body
-{
-    font-size: 14px;
+a,a:hover{
+    text-decoration: none;
+    color: #5a5a5a;
 }
 /* header */
 header .navbar{
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
     border-bottom:2px solid rgba(0, 0, 0, 0.05);
     background-color: white;
-    position: sticky;
-
-
+    -webkit-transition:padding 0.2s ease;
+    -moz-transition:padding 0.2s ease; 
+    -o-transition:padding 0.2s ease;        
+    transition:padding 0.2s ease;  
 }
+header .affix {
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+    -webkit-transition:padding 0.2s linear;
+    -moz-transition:padding 0.2s linear;  
+    -o-transition:padding 0.2s linear;         
+    transition:padding 0.2s linear;  
+}  
 header .navbar .navbar-brand {
     color: #dc4f72;
     font-weight: 600;
@@ -28,7 +38,6 @@ header .navbar .navbar-brand:hover {
 }
 #masterNavbar .nav-item i{
     color: #5a5a5a;
-    font-size: 16px;
     padding: 10px;
     background-color: #f7f9fc;
     border: solid 1px #eee;
@@ -40,7 +49,6 @@ header .navbar .navbar-brand:hover {
 {
     transition: all .5s;
     color: #2c3038;
-    font-size: 16px;
 }
 #masterNavbar .nav-link:hover {
     color: #dc4f72;
@@ -107,19 +115,47 @@ header .navbar .navbar-brand:hover {
 #masterNavbar .dropdown-item:hover::before 
 {
     width: 20px;
-}  
-#masterNavbar button
+}
+button
+{
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .5s
+}
+.btn-border
+{
+    margin-top: 50px;
+    background-color: #fff;
+    border: solid 1px #dc4f72;
+    color: #dc4f72;
+}
+.btn-border:hover
+{
+    background-color: #dc4f72;
+    color: #fff;
+}
+.btn-pink
+{
+    background-color: #dc4f72;
+    border: solid 1px #dc4f72;
+    color: #fff;
+}
+.btn-pink:hover
+{
+    background-color: #d62f58;
+    border-color: #cf2952;
+    color: #fff;
+}
+.btn-white
 {
     background-color: #fff;
     border: solid 1px #dc4f72;
     color: #dc4f72;
-    border-radius: 5px;
-    padding: 15px 25px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all .5s;
 }
-#masterNavbar button:hover
+.btn-white:hover
 {
     background-color: #dc4f72;
     color: #fff;
@@ -131,25 +167,907 @@ header .navbar .navbar-brand:hover {
 /* CAROUSEL */
 .masterCarousel
 {
+    margin-top: 90px;
     background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.92)), url('/./images/banner.jpg');
-    height: 500px;
+    overflow: hidden;
     background-size: cover;
-    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
 }
-.title p:first-of-type
+.masterCarousel__content
 {
-    font-size: 16px;
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.masterCarousel__left,.masterCarousel__right
+{
+    width: 50%;
+}
+.masterCarousel .title
+{
+    width: 100%;
+}
+.masterCarousel .title h3
+{
+    font-size: 50px;
+}
+.masterCarousel .title p
+{
+    font-size: 20px;
+}
+.title
+{
+    width: 50%;
+    padding: 0 0 50px;
+}
+.title span
+{
+    display: block;
     font-weight: 600;
     color: #dc4f72;
+    margin-bottom: 5px;
 }
 .title h3
 {
     font-size: 46px;
     color: #2c3038;
     line-height: 1;
+    font-weight: 600;
 }
-.title p:last-of-type()
+.title p
 {
-    font-size: 16px;
-    color: red;
-} 
+    color: #5a5a5a;
+}
+#masterIntro .card
+{
+    padding: 50px 0 20px;
+    background: #f7f9fc;
+    border: 1px solid #f7f9fc;
+    border-radius: 6px;
+    transition: all .5s;
+}
+#masterIntro .card:hover
+{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+    background: #fff;
+    transform: translateY(-0.5rem);
+}
+#masterIntro .card-title
+{
+    font-size: 26px;
+    color: #2c3038;
+    font-weight: 600;
+}
+#masterIntro .card-text
+{
+    margin: 0;
+    padding: 0;
+}
+#masterIntro img
+{
+    width: 25%;
+}
+
+.masterAbout
+{
+    background-color: #f7f9fc;
+    padding: 100px 0;
+}
+.masterAbout__content
+{
+    display: flex;
+    gap: 8%;
+}
+.masterAbout__left
+{
+    width: 50%;
+}
+.masterAbout__right
+{
+    width: 50%;
+}
+.masterAbout .title
+{
+    width: 100%;
+}
+.masterAbout .title h3
+{
+    font-size: 35px;
+}
+.masterAbout img
+{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: all .5s;
+}
+.masterAbout img:hover
+{
+    transform: translateY(-0.5rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- --------------------------------------------------------- -->
+<!-- code từ đây --> */
