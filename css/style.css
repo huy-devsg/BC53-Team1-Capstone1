@@ -289,16 +289,48 @@ button
 {
     transform: translateY(-0.5rem);
 }
-
-
-
-
-
-
-
-
-
-
+.masterAbout .card-deck
+{
+    padding-top: 50px;
+}
+.masterAbout .card
+{
+    background-color: #fff;
+    max-width: calc(100%/3);
+    padding: 2rem;
+    margin: 0;
+    border: 1px solid #f8f9fa;
+    border-radius: 6px;
+    box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
+    transition: all .5s;
+}
+.masterAbout .card:hover
+{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+}
+.masterAbout .card-body
+{
+    margin: 0;
+    padding: 0;
+}
+.masterAbout .card-body h4
+{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3038;
+}
+.masterAbout .card-body p:first-of-type
+{
+    color: #dc4f72;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1;
+}
+.masterAbout .card-body p:last-of-type
+{
+margin: 0;
+padding: 0;
+}
 
 
 
