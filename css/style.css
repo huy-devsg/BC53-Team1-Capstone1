@@ -1,5 +1,4 @@
-body
-a,a:hover{
+body a,a:hover{
     text-decoration: none;
     color: #5a5a5a;
 }
@@ -26,6 +25,11 @@ header .navbar .navbar-brand {
     font-weight: 600;
     font-size: 25px;
 }
+#masterNavbar
+{
+    justify-content: end;
+    align-items: center;
+}
 header .navbar .navbar-brand:hover {
     color: #dc4f72;
 }
@@ -37,13 +41,15 @@ header .navbar .navbar-brand:hover {
     padding: 0 10px;
 }
 #masterNavbar .nav-item i{
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
     color: #5a5a5a;
-    padding: 10px;
     background-color: #f7f9fc;
     border: solid 1px #eee;
     opacity: .7;
     border-radius: 50%;
-    margin-top: -10px;
 }
 #masterNavbar .nav-link
 {
@@ -56,7 +62,7 @@ header .navbar .navbar-brand:hover {
 
 #masterNavbar .nav-item .nav-link::before {
     content: '';
-    height: 2px;
+    height: 2.5px;
     width: 0;
     background-color: #dc4f72;
     bottom: 5px;
@@ -82,7 +88,8 @@ header .navbar .navbar-brand:hover {
     height: 10px;
     right: 20PX;
     font-size: 12px;
-    top: 45%;
+    opacity: .7;
+    top: 50%;
     right: 5px;
     transform: translateY(-50%);
 }
@@ -102,6 +109,7 @@ header .navbar .navbar-brand:hover {
 #masterNavbar .dropdown-item:hover
 {
     background: #fff;
+    color: #dc4f72;
 }
 #masterNavbar .dropdown-item::before {
     content: '';
@@ -116,10 +124,11 @@ header .navbar .navbar-brand:hover {
 {
     width: 20px;
 }
-button
+#button-primary
 {
-    margin-top: 40px;
-    border-radius: 5px;
+    margin-top: 50px;
+    border-color: #dc4f72;
+    border-radius: 6px;
     padding: 15px 30px;
     font-size: 14px;
     font-weight: 600;
@@ -151,14 +160,15 @@ button
 }
 .btn-white
 {
-    background-color: #fff;
-    border: solid 1px #dc4f72;
-    color: #dc4f72;
+    color: #212529;
+    background-color: #f8f9fa;
+    border:none;
 }
 .btn-white:hover
 {
-    background-color: #dc4f72;
-    color: #fff;
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: transparent;
 }
 #masterNavbar i.gg-sun
 {
@@ -289,7 +299,7 @@ button
 {
     transform: translateY(-0.5rem);
 }
-.masterAbout .card-deck
+.masterAbout .card-group
 {
     padding-top: 50px;
 }
@@ -332,28 +342,73 @@ margin: 0;
 padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* MIDDLE SECTION */
+.middle .card
+{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.33)),url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+.middle .card-img-overlay
+{
+    padding: 100px 0;
+}
+.middle .title h3
+{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+.middle .title p
+{
+    color: #fff;
+}
+/* question */
+.question .title
+{
+    width: 70%;
+}
+.question .title h3
+{
+    font-size: 46px;
+}
+.question .faq-image
+{
+    position: sticky;
+    top: 80px;
+}
+.question img
+{
+    border-radius: 6px;
+    box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
+    transition: all .5s;
+}
+.question img:hover
+{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+    transform: translateY(-0.5rem);
+}
+.question input
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#accordionPanel .accordion-item
+{
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+#accordionPanel .accordion-button:not(.collapsed)
+{
+    background-color: #fff;
+    border-color: transparent;
+}
 
 
 
