@@ -23,158 +23,183 @@
     <!-- My css -->
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
+  <body class="night-mode night-modeable" id="bodyNight">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-toggle="affix">
+        <nav class="navbar fixed-top navbar-expand-lg night-mode night-modeable">
           <div class="container">
             <a class="navbar-brand" href="#">
               <i class="fa fa-handshake-o" aria-hidden="true"></i>
               Masterwork</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse mx-3" id="masterNavbar">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#masterNavbar" aria-controls="masterNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse mx-3" id="masterNavbar">
             <ul class="navbar-nav my-3">
               <li class="nav-item">
                 <a class="nav-link active" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link night-mode night-modeable" href="#">About</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
+                  <a class="nav-link night-mode night-modeable" href="#">Services</a>
                 </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown night-mode night-modeable">
+                <a class="nav-link dropdown-toggle night-mode night-modeable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Pages
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Blog Posts</a></li>
-                  <li><a class="dropdown-item" href="#">Landing Page</a></li>
-                  <li><a class="dropdown-item" href="#">404 page</a></li>
+                  <li><a class="dropdown-item night-mode night-modeable" href="#">Blog Posts</a></li>
+                  <li><a class="dropdown-item night-mode night-modeable" href="#">Landing Page</a></li>
+                  <li><a class="dropdown-item night-mode night-modeable" href="#">404 page</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link night-mode night-modeable" href="#">Contact</a>
               </li>
               <li class="nav-item">
                 <a class="search" href="#">
-                  <i class="fa fa-search" aria-hidden="true"></i>
+                  <i class="fa fa-search night-mode night-modeable" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
-          </div>
-           <button class="btn-border mt-0" id="button-primary">
+            <button class="btn-border mt-0 lg-mb-5 night-mode night-modeable" id="button-primary">
               SCHEDULE A DEMO
            </button>
            <div class="mode-container mx-3">
-            <i class="gg-sun"></i>
-            <i class="gg-moon"></i>
+            <i id="mode-icon" class="gg-sun night-mode night-modeable"></i>
           </div>
           </div>
           </div>
-        </nav>            
+        </nav>
     </header>
-    <section class="masterCarousel">
+    <section class="masterCarousel mt-md-7 night-mode night-modeable">
         <div class="container masterCarousel__content">
-          <div class="masterCarousel__left">
-            <div class="title">
-              <h3 class="mb-3 mb-md-4">We Execute Our Ideas From Start to Finish</h3>
-              <p>Building a beautiful interactive business for startups and innovative companies.</p>
-              <button class="btn-border"id="button-primary">
-                GET STARTED
-             </button>
+          <div class="row">
+            <div class="col-xs-12 col-lg-6 col-xl-5">
+              <div class="title">
+                <h3 class="mb-3 mb-md-4 night-mode night-modeable">We Execute Our Ideas From Start to Finish</h3>
+                <p class="night-mode night-modeable">Building a beautiful interactive business for startups and innovative companies.</p>
+                <button class="btn-border night-mode night-modeable"id="button-primary">
+                  GET STARTED
+              </button>
+              </div>
             </div>
-          </div>
-          <div class="masterCarousel__right">
+          <div class="col-xs-12 col-lg-6 col-xl-5".>
               <img src="./images/main.png" alt="">
           </div>
+        </div>
       </div>
     </section>
-    <section class="masterIntro py-5" id="masterIntro">
-      <div class="title text-center mx-auto">
-        <span>WHY CHOOSE US</span>
-        <h3 class="mb-3 mb-md-4">Tools for business startup to professional</h3>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
-      </div>
-      <div class="container card-group mx-auto">
-        
-        <div class="card text-center">
-          <a href="#">
-            <img src="./images/s1.png" class="card-img-top mx-auto" alt="...">
-            <div class="card-body pb-0">
-              <h5 class="card-title">Interactive</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+    <section class="masterIntro night-mode night-modeable" id="masterIntro">
+      <div class="container">
+        <div class="title text-center mx-auto">
+          <span>WHY CHOOSE US</span>
+          <h3 class="mb-3 mb-md-4 night-mode night-modeable">Tools for business startup to professional</h3>
+          <p class="mx-sm-auto night-mode night-modeable">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
+        </div>
+        <div class="card-group mx-auto">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="row mx-2 my-2">
+                <div class="card text-center col-12 night-mode night-modeable">
+                  <a href="#">
+                    <img src="./images/s1.png" class="card-img-top mx-auto" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title night-mode night-modeable">Interactive</h5>
+                      <p class="card-text night-mode night-modeable">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-          </a>
-          </div>
-        <div class="card text-center mx-4">
-          <a href="#">
-            <img src="./images/s2.png" class="card-img-top mx-auto" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bussiness</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="row mx-2 my-2">
+                <div class="card text-center col-12 night-mode night-modeable">
+                  <a href="#">
+                    <img src="./images/s2.png" class="card-img-top mx-auto" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title night-mode night-modeable">Bussiness</h5>
+                      <p class="card-text night-mode night-modeable">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-          </a>
-          </div>
-        <div class="card text-center">
-          <a href="#">
-            <img src="./images/s3.png" class="card-img-top mx-auto" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Inspiration</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+            <div class="col-12 col-lg-4">
+              <div class="row mx-2 my-2">
+                <div class="card text-center col-12 night-mode night-modeable">
+                  <a href="#">
+                    <img src="./images/s3.png" class="card-img-top mx-auto" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title night-mode night-modeable">Inspiration</h5>
+                      <p class="card-text night-mode night-modeable">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-          </a>
           </div>
-      </div>
+        </div>
+      </div> 
     </section>
-    <section class="masterAbout py-5">
-      <div class="container masterAbout__content">
-        <div class="masterAbout__left">
+    <section class="masterAbout mt-5 night-mode night-modeable">
+    <div class="container masterAbout__content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
           <div class="title">
             <span>ABOUT OUR COMPANY</span>
-            <h3 class="mb-3 mb-md-4">The Best Choice For Your Successful Business!</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et est repellendus illum harum quam nihil totam reprehenderit! Ut sed eveniet quos! Asperiores officia, repudiandae similique reiciendis, ab est magnam esse nesciunt ea fuga facere voluptatem.</p>
+            <h3 class="mb-3 mb-md-4 night-mode night-modeable">The Best Choice For Your Successful Business!</h3>
+            <p class="mx-sm-auto night-mode night-modeable">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et est repellendus illum harum quam nihil totam reprehenderit! Ut sed eveniet quos! Asperiores officia, repudiandae similique reiciendis, ab est magnam esse nesciunt ea fuga facere voluptatem.</p>
             <button class="btn-pink" id="button-primary">
               READ MORE
-           </button>
+            </button>
           </div>
         </div>
-        <div class="masterAbout__right">
+        <div class="col-xs-12 col-sm-6">
             <img src="./images/about.jpg" alt="">
         </div>
-    </div>
-    <div class="container card-group mx-auto">
-      <div class="card">
-        <a href="#">
-          <div class="card-body">
-            <h4>Happy Customers</h4>
-            <p class="counter">10458</ơp>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere atque sed.</p>
+      </div>  
+      <div class="container card-group mx-auto">
+        <div class="row row-cols-2">
+          <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card my-2 night-mode night-modeable">
+                <a href="#">
+                  <div class="card-body night-mode night-modeable">
+                    <h4>Happy Customers</h4>
+                    <p class="counter">10458</ơp>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere atque sed.</p>
+                  </div>
+                </a>
+                </div>
           </div>
-        </a>
-        </div>
-      <div class="card mx-4">
-        <a href="#">
-          <div class="card-body">
-            <h4>Winning Awards</h4>
-            <p class="counter">890</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere atque sed.</p>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card my-2 night-mode night-modeable">
+              <a href="#">
+                  <div class="card-body night-mode night-modeable">
+                    <h4 class="night-mode night-modeable">Winning Awards</h4>
+                    <p class="counter">890</p>
+                    <p class="night-mode night-modeable">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere atque sed.</p>
+                  </div>
+                </a>
+                </div>
           </div>
-        </a>
-        </div>
-      <div class="card">
-        <a href="#">
-          <div class="card-body">
-            <h4>Completed Projects</h4>
-            <p class="counter">5345</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere atque sed.</p>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card my-2 night-mode night-modeable">
+              <a href="#">
+                  <div class="card-body night-mode night-modeable">
+                    <h4 class="night-mode night-modeable">Completed Projects</h4>
+                    <p class="counter">5345</p>
+                    <p class="night-mode night-modeable">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere atque sed.</p>
+                  </div>
+                </a>
+                </div>
           </div>
-        </a>
         </div>
+      </div>
     </div>
     </section>
     <section class="middle">
@@ -182,8 +207,8 @@
         <div class="card-img-overlay">
           <div class="container">
             <div class="title">
-              <h3 class="mb-3 mb-md-4">We are true to ourselves, and commit to always perform at our best.</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, doloribus atque. Corrupti exercitationem voluptatem ipsum iste consequuntur et vitae voluptas temporibus? Maxime dolores amet voluptatum illo consequatur placeat fugit ducimus.</p>
+              <h3 class="mb-3 mb-md-4 mx-auto night-mode night-modeable">We are true to ourselves, and commit to always perform at our best.</h3>
+              <p class=" night-mode night-modeable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, doloribus atque. Corrupti exercitationem voluptatem ipsum iste consequuntur et vitae voluptas temporibus? Maxime dolores amet voluptatum illo consequatur placeat fugit ducimus.</p>
               <button class="btn-white" id="button-primary">
                 READ MORE
              </button>
@@ -192,29 +217,29 @@
         </div>
       </div>
     </section>
-    <section class="question py-5">
+    <section class="question night-mode night-modeable">
       <div class="container question__content">
         <div class="title text-center mx-auto">
           <span>QUESTIONS AND ANSWERS</span>
-          <h3 class="mb-3 mb-md-4">General FAQs</h3>
-          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
+          <h3 class="mb-3 mb-md-4 night-mode night-modeable">General FAQs</h3>
+          <p class="mx-sm-auto night-mode night-modeable">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
         </div>
         <div class="row">
-          <div class="col-md-5 mt-5">
+          <div class="col-12 col-md-5">
             <div class="faq-image">
               <img src="./images/women.jpg" class="img-fluid shadow img-curve" alt="">
             </div>
           </div>
-          <div class="col-md-7 mt-5 pl-md-5">
+          <div class="col-12 col-md-7 pl-md-5">
             <div class="accordion" id="accordionPanel">
               <div class="accordion-item mb-3">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  <button class="accordion-button night-mode night-modeable" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                   There are many passages but the majority?
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                  <div class="accordion-body">
+                  <div class="accordion-body night-mode night-modeable">
                     Voluptates amet earum velit nobis aliquam
                     laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad corrupti libero omnis sapiente
                     non assumenda, incidunt officiis eaque iste minima autem.
@@ -223,12 +248,12 @@
               </div>
               <div class="accordion-item mb-4">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  <button class="accordion-button collapsed night-mode night-modeable" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                   Sed ut perspiciatis unde omnis?
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                  <div class="accordion-body">
+                  <div class="accordion-body night-mode night-modeable">
                     Voluptates amet earum velit nobis aliquam
                     laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad corrupti libero omnis sapiente
                     non assumenda, incidunt officiis eaque iste minima autem.
@@ -237,12 +262,12 @@
               </div>
               <div class="accordion-item mb-4">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  <button class="accordion-button collapsed night-mode night-modeable" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                     At vero eos iusto odio ducimus qui? 
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                  <div class="accordion-body">
+                  <div class="accordion-body night-mode night-modeable">
                     Voluptates amet earum velit nobis aliquam
                     laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad corrupti libero omnis sapiente
                     non assumenda, incidunt officiis eaque iste minima autem.
@@ -251,12 +276,12 @@
               </div>
               <div class="accordion-item mb-4">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                  <button class="accordion-button collapsed night-mode night-modeable" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                     We denounce with righteous? 
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-                  <div class="accordion-body">
+                  <div class="accordion-body night-mode night-modeable">
                     Voluptates amet earum velit nobis aliquam
                     laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad corrupti libero omnis sapiente
                     non assumenda, incidunt officiis eaque iste minima autem.
@@ -265,12 +290,12 @@
               </div>
               <div class="accordion-item mb-4">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                  <button class="accordion-button collapsed night-mode night-modeable" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
                   perspiciatis unde omnis?
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
-                  <div class="accordion-body">
+                  <div class="accordion-body night-mode night-modeable">
                     Voluptates amet earum velit nobis aliquam
                     laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad corrupti libero omnis sapiente
                     non assumenda, incidunt officiis eaque iste minima autem.
@@ -279,12 +304,12 @@
               </div>
               <div class="accordion-item mb-4">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                  <button class="accordion-button collapsed night-mode night-modeable" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
                     At vero eos iusto odio ducimus qui?
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
-                  <div class="accordion-body">
+                  <div class="accordion-body night-mode night-modeable">
                     Voluptates amet earum velit nobis aliquam
                     laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad corrupti libero omnis sapiente
                     non assumenda, incidunt officiis eaque iste minima autem.
@@ -296,6 +321,44 @@
         </div>
       </div>
     </section>
+
+
+    <!-- NIGHT MODE -->
+    <script>
+      const modeIcon = document.getElementById('mode-icon');
+      const body = document.body;
+  
+      modeIcon.addEventListener('click', () => {
+        body.classList.toggle('night-mode');
+        const isNightMode = body.classList.contains('night-mode');
+        if (isNightMode) {
+          // Chuyển sang night mode
+          modeIcon.classList.remove('gg-moon');
+          modeIcon.classList.add('gg-sun');
+          
+          setNightMode();
+        } else {
+          // Chuyển sang day mode
+          modeIcon.classList.remove('gg-sun');
+          modeIcon.classList.add('gg-moon');
+          setDayMode();
+        }
+      });
+  
+      function setNightMode() {
+        const elements = document.querySelectorAll('.night-modeable');
+        elements.forEach((element) => {
+          element.classList.add('night-mode');
+        });
+      }
+  
+      function setDayMode() {
+        const elements = document.querySelectorAll('.night-modeable');
+        elements.forEach((element) => {
+          element.classList.remove('night-mode');
+        });
+      }
+    </script>
     <!-- SCROLL STICKY NAV -->
     <!-- Optional JavaScript -->
 <!-- jQuery -->
