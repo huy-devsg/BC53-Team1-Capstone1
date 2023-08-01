@@ -2,17 +2,27 @@ body a,a:hover{
     text-decoration: none;
     color: #5a5a5a;
 }
-#bodyNight
+#bodyNight.night-mode
 {
     background: #131617;
     color: #b7b7b7;
 }
-/* header */
+/* HEADER */
 header .navbar{
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
     border-bottom:2px solid rgba(0, 0, 0, 0.05);
     background-color: white; 
+    position: fixed;
+    width: 100%;
 }
+header .navbar.little-nav{
+    padding: 0;
+    transition: all .3s;
+ }
+ header .navbar.heavy{
+transition: all .3s;
+}
+
 header .navbar.night-mode{
     background-color: #131617;
 }
@@ -26,6 +36,20 @@ header .navbar .navbar-brand {
     justify-content: end;
     align-items: center;
 }
+#toggleButton
+{
+    background-color: #dc4f72;
+    color: rgba(0, 0, 0, 0); 
+    padding: 5px 7px;
+}
+#toggleButton .visible {
+    display: inline-block;
+    color: #fff;
+    font-size: 25px;
+}
+#toggleButton .invisible {
+    display: none; 
+}
 header .navbar .navbar-brand:hover {
     color: #dc4f72;
 }
@@ -37,6 +61,7 @@ header .navbar .navbar-brand:hover {
     padding: 0 10px;
 }
 #masterNavbar .nav-item i{
+    cursor: pointer;
     width: 40px;
     height: 40px;
     line-height: 38px;
@@ -64,9 +89,23 @@ header .navbar .navbar-brand:hover {
     transition: all .5s;
     color: #2c3038;
 }
-#masterNavbar .nav-link.night-mode
+#masterNavbar .nav-link
+{
+    transition: all .5s;
+    color: #2c3038;
+}
+#navbar1.little-nav #masterNavbar .nav-link:not( .active)
+{
+    color: #5a5a5a;
+    opacity: .95;
+}
+#navbar1.heavy .nav-link.night-mode
 {
     color: #eee;
+}
+#navbar1.little-nav #masterNavbar .nav-link.night-mode
+{
+    color: #b7b7b7;
 }
 #masterNavbar .nav-link:hover {
     color: #dc4f72;
@@ -140,6 +179,7 @@ header .navbar .navbar-brand:hover {
 {
     width: 20px;
 }
+/* BUTTON */
 #button-primary
 {
     margin-top: 50px;
@@ -152,13 +192,12 @@ header .navbar .navbar-brand:hover {
 }
 #button-primary.night-mode
 {
-    background-color: #131617;
+    background-color: transparent;
     color: #dc4f72;
 }
 .btn-border
 {
     margin-top: 50px;
-    background-color: #fff;
     border: solid 1px #dc4f72;
     color: #dc4f72;
 }
@@ -191,18 +230,88 @@ header .navbar .navbar-brand:hover {
     background-color: #e2e6ea;
     border-color: transparent;
 }
-#masterNavbar .mode-container
+.navbar .mode-container
 {
     width: 40px;
+    transition: all .3s;
 }
-#masterNavbar .mode-container i
+#navbar1 .mode-container i
 {
     color: #404040;
 }
-#masterNavbar .mode-container i.night-mode{
+#navbar1 .mode-container i
+{
+    color: #404040;
+}
+#navbar1 .mode-container i.night-mode{
     color: #eee;
+    transition: all .5s;
+  }
+  #navbar1.little-nav .mode-container i.night-mode{
+    color: #b7b7b7;
   }
 
+#myModal .modal-dialog
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 40%;
+    left: 50%;
+}
+#myModal .modal-content
+{
+    background-color: transparent;
+    width: 100%;
+    transform: translate(-50%,50%);
+
+}
+#myModal .row
+{
+    width: 100%;
+    --bs-gutter-x:0;
+}
+#myModal input
+{
+    background-color: #fff;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: -500px;
+}
+#myModal input.night-mode{
+    color: #b7b7b7;
+    background: #131617;
+    border: 1px solid #333;
+}
+#myModal input.night-mode::placeholder {
+    color: #838383;
+}
+#myModal button.btn-outline-secondary
+{
+    height: 55px;
+    border: none;
+    background-color: #dc4f72;
+    border-radius: 0 5px 5px 0;
+    color: #eee;
+    padding: 0 25px;
+}
+#myModal button.button-close
+{
+    position: absolute;
+    color: #b7b7b7;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    right: 0;
+    top: -70px;
+    opacity: 1;
+}
+#myModal button.button-close:hover
+{
+    color: #eee;
+}
 /* CAROUSEL */
 .masterCarousel
 {
@@ -247,6 +356,7 @@ header .navbar .navbar-brand:hover {
 {
     font-size: 20px;
 }
+/* TITLE */
 .title
 {
     width: 50%;
@@ -278,6 +388,7 @@ header .navbar .navbar-brand:hover {
 {
     color: #b7b7b7;
 }
+/* INTRO */
 #masterIntro
 {
     background-color: white;
@@ -333,7 +444,7 @@ header .navbar .navbar-brand:hover {
 {
     width: 25%;
 }
-
+/* About */
 .masterAbout
 {
     background-color: #f7f9fc;
@@ -357,7 +468,6 @@ header .navbar .navbar-brand:hover {
 {
     font-size: 35px;
 }
-
 .masterAbout img
 {
     width: 100%;
@@ -453,7 +563,7 @@ header .navbar .navbar-brand:hover {
 {
     color: #fff;
 }
-/* question */
+/* Question */
 .question
 {
     background-color: #f7f9fc;
@@ -496,6 +606,7 @@ header .navbar .navbar-brand:hover {
 #accordionPanel
 {
     padding-left: 50px;
+    --bs-accordion-bg:transparent;
 }
 #accordionPanel .accordion-item
 {
@@ -508,6 +619,7 @@ header .navbar .navbar-brand:hover {
     font-size: 20px;
     padding: 25px;
 }
+
 #accordionPanel button.night-mode
 {
     background-color: #131617;
@@ -556,6 +668,10 @@ header .navbar .navbar-brand:hover {
 }
 
 @media screen and (max-width:992px) {
+    #masterNavbar
+    {
+        text-align: center;
+    }
     #masterIntro .title
     {
         width: 100%;
@@ -563,6 +679,18 @@ header .navbar .navbar-brand:hover {
     #button-primary
     {
         margin-top: 10px;
+    }
+    .mode-container
+    {
+        position: absolute;
+        right:65px;
+        top: 22px;
+        transition: all .2s;
+    }
+    #navbar1.little-nav .mode-container
+    {
+        top: 10px;
+        transition: all .3s;
     }
 }
 @media screen and (max-width: 768px){
@@ -611,6 +739,25 @@ header .navbar .navbar-brand:hover {
     #accordionPanel button
     {
         font-size: 18px;
+    }
+    #myModal .modal-content
+    {
+        width: 90%;
+        margin: auto;
+    }
+    #myModal input
+    {
+        background-color: #fff;
+        width: 90%;
+        margin: auto;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+    }
+    #myModal button.btn-outline-secondary
+    {
+        height: 55px;
+        width: 90%;
     }
 }
 
