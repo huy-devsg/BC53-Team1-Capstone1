@@ -831,6 +831,9 @@ header .navbar .navbar-brand:hover {
     border: none;
     color: #2c3038;
 }
+#product-tab .nav-link.active {
+    background-color: red;
+}
 #products .nav-tabs 
 {
     border: none;
