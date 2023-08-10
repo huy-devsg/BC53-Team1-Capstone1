@@ -779,6 +779,7 @@ header .navbar .navbar-brand:hover {
         height: 55px;
         width: 90%;
     }
+   
 }
 
 
@@ -788,7 +789,8 @@ header .navbar .navbar-brand:hover {
 
 /* PRODUCTS */
 #products #button-primary:hover.night-mode{
-    color: #dc4f72;
+    color: #fff;
+    border-color: #dc4f72;
 }
 #products .nav-item button.night-mode{
     color: #eee;
@@ -843,7 +845,7 @@ header .navbar .navbar-brand:hover {
     position: relative;
     width: 100%;
     padding: 25px;
-}
+}   
 #product-tab .nav-link.active {
     color: #dc4f72;
 }
@@ -1074,6 +1076,11 @@ header .navbar .navbar-brand:hover {
 }
 
 /* INDEX */
+#index #button-primary:hover.night-mode{
+    color: #fff;
+    background-color: #dc4f72;
+    border-color: #dc4f72
+}
 #index .header-section h3.night-mode {
     color: #eee;
 }
@@ -1091,17 +1098,11 @@ header .navbar .navbar-brand:hover {
     line-height: 52px;
     font-weight: 600;
     font-size: 14px;
-    margin: 0px;
+    margin: 0px 10px;
     padding: 0px 30px;
     text-transform: uppercase;
 }
 
-#button-primary:hover {
-    color: #fff;
-    background-color: #dc4f72;
-    border-color: #dc4f72
-    
-}
 
 /* FOOTER */
 #footer .footer__icon .footer__right a i:hover.night-mode{
