@@ -787,6 +787,12 @@ header .navbar .navbar-brand:hover {
 
 
 /* PRODUCTS */
+#products #button-primary:hover.night-mode{
+    color: #dc4f72;
+}
+#products .nav-item button.night-mode{
+    color: #eee;
+}
 #products h3.night-mode {
     color: #eee;
 }
@@ -833,7 +839,7 @@ header .navbar .navbar-brand:hover {
 #product-tab .nav-link {
     background-color: transparent;
     border: none;
-    color: #eee;
+    color: #2c3038;
     position: relative;
     width: 100%;
     padding: 25px;
@@ -1063,6 +1069,9 @@ header .navbar .navbar-brand:hover {
 .owl-theme .owl-dots .owl-dot:hover span {
     background: #dc4f72;
 }
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: #dc4f72;
+}
 
 /* INDEX */
 #index .header-section h3.night-mode {
@@ -1082,14 +1091,16 @@ header .navbar .navbar-brand:hover {
     line-height: 52px;
     font-weight: 600;
     font-size: 14px;
-    margin: 0px 10px;
+    margin: 0px;
     padding: 0px 30px;
     text-transform: uppercase;
 }
 
-.button__item a:hover {
-    background-color: #dc4f72;
+#button-primary:hover {
     color: #fff;
+    background-color: #dc4f72;
+    border-color: #dc4f72
+    
 }
 
 /* FOOTER */
